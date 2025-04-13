@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Reds Show App - တိုက်ရိုက်ပွဲစဉ်</title>
+    <title>The Reds Show App - ဘောလုံးပွဲစဉ်များ</title>
     <meta name="description" content="The Reds Show App ဖြင့် ဘောလုံးပွဲများကို တိုက်ရိုက်ကြည့်ရှုပါ။ ရမှတ်များနှင့် ထူးခြားမှုများကို ရယူပါ။">
-    <meta name="keywords" content="ဘောလုံးတိုက်ရိုက်, The Reds Show App, ဘောလုံးအက်ပ်, ရမှတ်များ">
-    <!-- Video.js CSS -->
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <meta name="keywords" content="ဘောလုံးတိုက်ရိုက်, The Reds Show App, ဘောလုံးအက်ပ်, ရမှတ်များ, livestream football">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,23 +13,15 @@
         <h1>The Reds Show App</h1>
         <p>ဘောလုံးပွဲများကို တိုက်ရိုက်ခံစားပါ။</p>
     </header>
-    <section id="live-match">
-        <h2>တိုက်ရိုက်ပွဲစဉ်</h2>
-        <div id="video-player">
-            <video id="my-video" class="video-js" controls preload="auto" width="640" height="360">
-                <source id="video-source" src="" type="application/x-mpegURL">
-                <p class="vjs-no-js">ဗီဒီယိုဖွင့်ရန် JavaScript ဖွင့်ထားပါ။</p>
-            </video>
-        </div>
-        <div id="match-details">
-            <p>ပွဲစဉ်ဒေတာများကို ဖွင့်နေပါသည်...</p>
+    <section id="match-list">
+        <h2>ဘောလုံးပွဲစဉ်များ</h2>
+        <div id="matches">
+            <p>ပွဲစဉ်များကို ဖွင့်နေပါသည်...</p>
         </div>
     </section>
     <footer>
         <p>© 2025 The Reds Show App. All rights reserved.</p>
     </footer>
-    <!-- Video.js JavaScript -->
-    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
