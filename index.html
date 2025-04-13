@@ -3,333 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Reds Show App ဖြင့် Liverpool ဘောလုံးပွဲများကို HD ဖြင့် တိုက်ရိုက်ကြည့်ရှုပါ၊ ရမှတ်များနှင့် ထူးခြားမှုများကို ရယူပါ။">
-    <meta name="keywords" content="ဘောလုံးတိုက်ရိုက်, The Reds Show App, Liverpool, ဘောလုံးအက်ပ်, ရမှတ်များ">
-    <title>The Reds Show App - Liverpool ပရိသတ်များအတွက်</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #F4F4F4; /* မီးခိုးရောင်ဖျော့ */
-        }
-
-        /* အဖွင့်အပိုင်း */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('anfield.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #FFFFFF; /* အဖြူရောင် */
-            padding: 1rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .download-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .download-buttons a {
-            display: block;
-            padding: 0.8rem 2rem;
-            background-color: #C8102E; /* Liverpool အနီရောင် */
-            color: #FFFFFF;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .download-buttons a:hover {
-            background-color: #A00D24; /* အနီရောင်မှောင် */
-        }
-
-        /* အားသာချက်အပိုင်း */
-        .features {
-            padding: 2rem 1rem;
-            background-color: #FFFFFF; /* အဖြူရောင် */
-            text-align: center;
-        }
-
-        .features h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #C8102E; /* Liverpool အနီရောင် */
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .feature-item {
-            padding: 1rem;
-            background-color: #F4F4F4; /* မီးခိုးရောင်ဖျော့ */
-            border-radius: 8px;
-        }
-
-        .feature-item img {
-            width: 40px;
-            margin-bottom: 0.8rem;
-        }
-
-        .feature-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: #C8102E; /* Liverpool အနီရောင် */
-        }
-
-        .feature-item p {
-            font-size: 0.9rem;
-            color: #1D3557; /* အနက်ရောင်ဖျော့ */
-        }
-
-        /* အက်ပ်ပုံအပိုင်း */
-        .screenshots {
-            padding: 2rem 1rem;
-            background-color: #1D3557; /* အနက်ရောင်ဖျော့ */
-            color: #FFFFFF; /* အဖြူရောင် */
-            text-align: center;
-        }
-
-        .screenshots h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #C8102E; /* Liverpool အနီရောင် */
-        }
-
-        .screenshot-grid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .screenshot-grid img {
-            width: 90%;
-            max-width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        /* ဒေါင်းလုဒ်တိုက်တွန်းအပိုင်း */
-        .cta {
-            padding: 2rem 1rem;
-            background-color: #C8102E; /* Liverpool အနီရောင် */
-            text-align: center;
-            color: #FFFFFF; /* အဖြူရောင် */
-        }
-
-        .cta h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* အောက်ခြေ */
-        footer {
-            padding: 1.5rem 1rem;
-            background-color: #1D3557; /* အနက်ရောင်ဖျော့ */
-            color: #FFFFFF; /* အဖြူရောင် */
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #C8102E; /* Liverpool အနီရောင် */
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        footer .credits {
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
-            color: #F4F4F4;
-        }
-
-        /* ဖုန်းနဲ့ ကွန်ပျူတာအတွက် ဒီဇိုင်း */
-        @media (min-width: 768px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-
-            .hero p {
-                font-size: 1.5rem;
-            }
-
-            .download-buttons {
-                flex-direction: row;
-                gap: 1.5rem;
-            }
-
-            .download-buttons a {
-                font-size: 1.2rem;
-            }
-
-            .features {
-                padding: 4rem 2rem;
-            }
-
-            .features h2 {
-                font-size: 2.5rem;
-            }
-
-            .feature-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-
-            .feature-item {
-                padding: 1.5rem;
-            }
-
-            .feature-item img {
-                width: 50px;
-            }
-
-            .feature-item h3 {
-                font-size: 1.3rem;
-            }
-
-            .feature-item p {
-                font-size: 1rem;
-            }
-
-            .screenshots {
-                padding: 4rem 2rem;
-            }
-
-            .screenshots h2 {
-                font-size: 2.5rem;
-            }
-
-            .screenshot-grid {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .screenshot-grid img {
-                width: 200px;
-                max-width: none;
-            }
-
-            .cta {
-                padding: 4rem 2rem;
-            }
-
-            .cta h2 {
-                font-size: 2.5rem;
-            }
-
-            .cta p {
-                font-size: 1.2rem;
-            }
-
-            footer {
-                padding: 2rem;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>The Reds Show App - တိုက်ရိုက်ပွဲစဉ်</title>
+    <meta name="description" content="The Reds Show App ဖြင့် ဘောလုံးပွဲများကို တိုက်ရိုက်ကြည့်ရှုပါ။ ရမှတ်များနှင့် ထူးခြားမှုများကို ရယူပါ။">
+    <meta name="keywords" content="ဘောလုံးတိုက်ရိုက်, The Reds Show App, ဘောလုံးအက်ပ်, ရမှတ်များ">
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- အဖွင့်အပိုင်း -->
-    <section class="hero">
+    <header>
         <h1>The Reds Show App</h1>
-        <p>ချစ်လှစွာသော Liverpool ပရိသတ်များအတွက်၊ You'll Never Walk Alone!</p>
-        <div class="download-buttons">
-            <a href="app-release.apk" class="download-button" download>Auto ဒေါင်းရန်</a>
-            <a href="https://www.mediafire.com/file/ghk8yfzogn5u5li/The_Reds_Show.apk/file" target="_blank">download ရယူရန်</a>
+        <p>ဘောလုံးပွဲများကို တိုက်ရိုက်ခံစားပါ။</p>
+    </header>
+    <section id="live-match">
+        <h2>တိုက်ရိုက်ပွဲစဉ်</h2>
+        <div id="video-player">
+            <video id="my-video" class="video-js" controls preload="auto" width="640" height="360">
+                <source id="video-source" src="" type="application/x-mpegURL">
+                <p class="vjs-no-js">ဗီဒီယိုဖွင့်ရန် JavaScript ဖွင့်ထားပါ။</p>
+            </video>
+        </div>
+        <div id="match-details">
+            <p>ပွဲစဉ်ဒေတာများကို ဖွင့်နေပါသည်...</p>
         </div>
     </section>
-
-    <!-- အားသာချက်အပိုင်း -->
-    <section class="features">
-        <h2>Liverpool ပွဲများကို The Reds Show နှင့်ကြည့်ပါ</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <img src="https://img.icons8.com/?size=100&id=114331&format=png&color=000000" alt="တိုက်ရိုက်ထုတ်လွှင့်ရန်">
-                <h3>HD တိုက်ရိုက်ထုတ်လွှင့်မှု</h3>
-                <p>Liverpool ပွဲများကို HD အရည်အသွေးဖြင့် တိုက်ရိုက်ကြည့်ရှုပါ။</p>
-            </div>
-            <div class="feature-item">
-                <img src="https://img.icons8.com/?size=100&id=13119&format=png&color=000000" alt="ရမှတ်များ">
-                <h3>အချိန်နှင့်တစ်ပြေးညီ ရမှတ်များ</h3>
-                <p>ပွဲစဉ်ရမှတ်များနှင့် အချက်အလက်များကို ချက်ချင်းရယူပါ။</p>
-            </div>
-            <div class="feature-item">
-                <img src="https://img.icons8.com/?size=100&id=9WPPIgWX5Ofo&format=png&color=000000" alt="ထူးခြားမှုများ">
-                <h3>ပွဲထူးခြားမှုများ</h3>
-                <p>Liverpool ရဲ့ အကောင်းဆုံးအခိုက်အတန့်များကို ဗီဒီယိုဖြင့် ပြန်ကြည့်ပါ။</p>
-            </div>
-            <div class="feature-item">
-                <img src="https://img.icons8.com/?size=100&id=DP3QEe2bIL0r&format=png&color=000000" alt="သတိပေးချက်များ">
-                <h3>တိုက်ရိုက်သတိပေးချက်များ</h3>
-                <p>Liverpool ပွဲစဉ်အပ်ဒိတ်များကို အချိန်နှင့်တစ်ပြေးညီ ရယူပါ။</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- အက်ပ်ပုံအပိုင်း -->
-    <section class="screenshots">
-        <h2>The Reds Show App ကို စူးစမ်းပါ</h2>
-        <div class="screenshot-grid">
-            <img src="1.jpg" alt="အက်ပ်ပုံ ၁">
-            <img src="2.jpg" alt="အက်ပ်ပုံ ၂">
-            <img src="3.jpg" alt="အက်ပ်ပုံ ၃">
-            <img src="4.jpg" alt="အက်ပ်ပုံ ၄">
-        </div>
-    </section>
-
-    <!-- ဒေါင်းလုဒ်တိုက်တွန်းအပိုင်း -->
-    <section class="cta">
-        <h2>Liverpool ပရိသတ်များနှင့်ပါဝင်ပါ！</h2>
-        <p>အခုပဲ The Reds Show App ကို ဒေါင်းလုပ်ပြီး Anfield ရဲ့ စိတ်လှုပ်ရှားမှုကို ခံစားပါ။</p>
-    </section>
-
-    <!-- အောက်ခြေ -->
     <footer>
-        <p>© 2025 The Reds Show App။ မူပိုင်ခွင့်အားလုံး လက်ဝယ်ထားသည်။</p>
-        <p>
-            <!--<a href="/privacy">ကိုယ်ရေးအချက်လျှို့ဝှက်မှု</a> |-->
-            <a href="https://football.redsport.live/privacy-policy">ဝန်ဆောင်မှုစည်းမျဉ်း</a>
-        </p>
-        <p>ဆက်သွယ်ရန် အကောင့်များ: 
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://t.me/theredsshowTRS" target="_blank">Telegram</a>
-            <a href="https://www.youtube.com/@TheREDSShow" target="_blank">Youtube</a>
-        </p>
+        <p>© 2025 The Reds Show App. All rights reserved.</p>
     </footer>
+    <!-- Video.js JavaScript -->
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
